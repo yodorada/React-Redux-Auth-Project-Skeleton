@@ -1,0 +1,197 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins/mixins.scss';
+
+.contentview
+{
+    &.login
+    {
+        .form
+        {
+            position: relative;
+
+            width: 340px;
+            margin: 10px auto 50px;
+            padding: 30px 30px 30px;
+
+            border-radius:8px;
+
+            text-align: center;
+
+            background: $brand-primary;
+            box-shadow: 0 3px 4px #ccc;
+
+            @include transition(all .2s linear);
+            @include scale(1);
+            &.isauth
+            {
+                opacity: 0;
+
+                @include scale(0);
+            }
+            h2
+            {
+                
+                font-size: 26px;
+
+                margin: 10px 0 40px;
+
+                color: #fff;
+            }
+            button
+            {
+                font-size: 16px;
+
+                width: 100%;
+
+                text-transform: uppercase;
+
+
+                color: $brand-primary;
+                outline: 0;
+                background: #fff;
+				opacity: .3;
+                cursor: default;
+            	@include transition(opacity .2s ease);
+                border:0;
+                padding:7px 10px;
+            }
+            &.filled {
+                button {
+                    cursor: pointer;
+                    opacity: 1;
+                    box-shadow: 0 3px 6px $brand-primary-darkest;
+                    &:active {
+                        box-shadow: none;
+                    }
+                }
+            }
+            .inputfield
+            {
+                position: relative;
+
+                display: block;
+
+                width: 100%;
+                height: 45px;
+                margin-bottom: 30px;
+                input + label
+                {
+                    position: absolute;
+                    top: 14px;
+                    left: 0;
+
+                    font-size:.9rem;
+                    text-transform: uppercase;
+
+                    pointer-events: none;
+                    // color:rgba(40,176,148,.6);
+
+                    color: $brand-primary-darkest;
+
+                    @include transition(all .2s linear);
+                    @include translate(0, 0);
+                }
+                
+                &.focused,
+                &.filled
+                {
+                    input + label
+                    {
+                        font-size: .8rem;
+
+                        top: 0;
+                        left: 0;
+
+                        color:#fff;
+
+                        @include translate(0, -80%);
+                    }
+                }
+                input
+                {
+                    font-size: 1rem;
+                    line-height: 45px;
+
+                    width: calc(100% - 25px);
+                    height: 45px;
+                    margin-left: 0;
+
+                    color: #fff;
+                    border: 0;
+                    background: transparent;
+                    z-index: 5;
+                    &:focus
+                    {
+                        outline: 0;
+                    }
+                    &::-webkit-caps-lock-indicator {
+                        content: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"17\" height=\"17\"><path fill=\"white\" fill-opacity=\"0.6\" d=\"M12.5 0.5A 4 4 0 0 1 16.5 4.5L 16.5 12.5A 4 4 0 0 1 12.5 16.5L 4.5 16.5A 4 4 0 0 1 0.5 12.5L 0.5 4.5A 4 4 0 0 1 4.5 0.5L 12.5 0.5M 8.5 2L 4 7L 6.25 7L 6.25 10.25L 10.75 10.25L 10.75 7L 13 7L 8.5 2M 10.75 12L 6.25 12L 6.25 14.25L 10.75 14.25L 10.75 12\"/></svg>');
+                    }
+                    &::-webkit-credentials-auto-fill-button {
+                        background-color: rgba(255,255,255,.6);
+                    }
+                    &:-webkit-autofill,
+                    &:-webkit-autofill:hover,
+                    &:-webkit-autofill:focus
+                    {
+                        -webkit-transition: 'color 99999s ease-out, background-color 99999s ease-out';
+                                transition: 'color 99999s ease-out, background-color 99999s ease-out';
+                        -webkit-transition-delay: 99999s;
+                                transition-delay: 99999s;
+
+                        -webkit-box-shadow: 0 0 0 1000px rgba(40,176,148,1) inset;
+                                box-shadow: 0 0 0 1000px rgba(40,176,148,1) inset;
+
+                        -webkit-text-fill-color: #fff !important;
+                    }
+                }
+                &.inputfield input[type='password']
+                {
+                    width: calc(100% - 25px);
+
+                    color: #fff;
+                }
+                .inputfield input:not([value]) + label,
+                .inputfield input:not([value='']) + label
+                {
+                    font-size: 1.125rem !important;
+
+                    top: 0 !important;
+                    left: 0 !important;
+
+                    @include translate(0, -80%);
+                }
+                &::after
+                {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 1px;
+
+                    content: '';
+
+                    background: #fff;
+                }
+                &.focused {
+                    &::before
+                    {
+                        position: absolute;
+                        top: 5px;
+                        left: 0;
+
+                        width: 100%;
+                        height: calc(100% - 5px);
+
+                        content: '';
+
+                        background: rgba(0,0,0,0.05);
+                        z-index: 0;
+                        pointer-events:none;
+                    }
+                }
+            }
+        }
+    }
+}

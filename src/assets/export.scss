@@ -1,0 +1,8 @@
+@import './variables.scss';
+
+
+:export {
+	brandPrimary: $brand-primary;
+	brandPrimaryDarker: $brand-primary-darker;
+	brandPrimaryDarkest: $brand-primary-darkest;
+}

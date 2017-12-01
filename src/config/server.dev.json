@@ -1,0 +1,7 @@
+{
+	"server": {
+		"serviceUrl": "http://de.gfdb-api.www/api",
+		"assetPath": "http://de.gfdb-api.www/assets",
+		"frontendKey": "xEKc-sUVDD2_rZaoTa46gCxsVQi7hwz8gsE-Ei8"
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"server": {
+		"serviceUrl": "__INSERT_YOUR_PROD_API_URL__/api",
+		"assetPath": "__INSERT_YOUR_PROD_API_URL__/assets",
+		"frontendKey": "__INSERT_YOUR_PROD_API_FRONTEND_KEY__"
+	}
+}

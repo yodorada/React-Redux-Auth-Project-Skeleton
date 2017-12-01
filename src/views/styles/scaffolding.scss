@@ -1,0 +1,151 @@
+@import '../../assets/variables.scss';
+@import '../../assets/mixins/mixins.scss';
+
+
+html,
+body
+{
+    font-size: 16px;
+
+    margin: 0;
+    padding: 0;
+}
+body {
+  background:#fff;
+  font-family: 'Helvetica','Arial', sans-serif;
+  color:$brand-primary;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight:500;
+}
+
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+
+#root {
+  position:relative;
+  z-index:5;
+}
+
+#initloader {
+  font-family: 'Helvetica', sans-serif;
+  text-align:center;
+  font-size:20px;
+  margin:30px auto;
+  color:$brand-primary;
+}
+
+#scaffolding {
+  
+  margin:0px auto;
+  padding:0;
+  z-index:5;
+
+  @include transition(opacity .2s ease);
+  opacity: 0;
+  
+
+  &.ready {
+    opacity: 1;
+  }
+
+  #routes {
+    @include translateY(0);
+    @include transition(all .2s ease);
+  }
+
+  &.change {
+    #routes {
+      @include translateY(20px);
+      opacity: 0;
+    }
+  }
+  
+  
+
+  #wrapper {
+    @include flexbox();
+    @include justify-content(center);
+    margin-top:60px;
+    
+    width: 100%;
+    position:relative;
+
+    #inner {
+      position:relative;
+      width: 100%;
+      max-width: 1200px;
+      min-height: 560px;
+
+      
+
+      #logo {
+          margin: auto;
+          width: 40px;
+          height: 40px;
+          z-index: 10;
+        
+        img {
+          width: inherit;
+          height: auto;
+        }
+
+      }
+
+      
+
+    }
+
+    
+  }
+  
+}
+
+
+.mnml-spinner {
+  display: inline-block;
+    border-radius: 100%;
+    border-style: solid;
+    animation: mnmlSpinner .6s infinite linear;
+}
+@keyframes mnmlSpinner {
+    0%   { transform: rotate(0); }
+    100% { transform: rotate(359.9deg); }
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+  .scaffolding {
+    #wrapper {
+      #inner {
+        padding:0 20px;
+      }
+    }
+  }
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  
+  
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1220px) {
+  .scaffolding {
+    #wrapper {
+      #inner {
+        padding:0;
+      }
+    }
+  }
+}

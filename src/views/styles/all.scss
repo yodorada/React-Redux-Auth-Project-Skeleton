@@ -1,0 +1,16 @@
+
+@import "./login.scss";
+
+
+@import '../../assets/variables.scss';
+@import '../../assets/mixins/mixins.scss';
+
+.contentview
+{
+    &.home,
+    &.credits
+    {
+      margin: 20px auto 50px;
+      text-align: center;
+    }
+}

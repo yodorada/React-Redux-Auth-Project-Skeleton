@@ -1,0 +1,7 @@
+{
+	"storage": {
+		"prefix": "yodo:",
+		"persistWhitelist": [],
+		"persistBlacklist": ["auth"]
+	}
+}

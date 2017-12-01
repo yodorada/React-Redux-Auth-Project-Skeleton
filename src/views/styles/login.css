@@ -1,0 +1,136 @@
+.contentview.login .form {
+  position: relative;
+  width: 340px;
+  margin: 10px auto 50px;
+  padding: 30px 30px 30px;
+  border-radius: 8px;
+  text-align: center;
+  background: #99428e;
+  box-shadow: 0 3px 4px #ccc;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+  .contentview.login .form.isauth {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  .contentview.login .form h2 {
+    font-size: 26px;
+    margin: 10px 0 40px;
+    color: #fff; }
+  .contentview.login .form button {
+    font-size: 16px;
+    width: 100%;
+    text-transform: uppercase;
+    color: #99428e;
+    outline: 0;
+    background: #fff;
+    opacity: .3;
+    cursor: default;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+    border: 0;
+    padding: 7px 10px; }
+  .contentview.login .form.filled button {
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: 0 3px 6px #6d2c65; }
+    .contentview.login .form.filled button:active {
+      box-shadow: none; }
+  .contentview.login .form .inputfield {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 30px; }
+    .contentview.login .form .inputfield input + label {
+      position: absolute;
+      top: 14px;
+      left: 0;
+      font-size: .9rem;
+      text-transform: uppercase;
+      pointer-events: none;
+      color: #6d2c65;
+      -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+      -webkit-transform: translate(0, 0);
+      -moz-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0); }
+    .contentview.login .form .inputfield.focused input + label, .contentview.login .form .inputfield.filled input + label {
+      font-size: .8rem;
+      top: 0;
+      left: 0;
+      color: #fff;
+      -webkit-transform: translate(0, -80%);
+      -moz-transform: translate(0, -80%);
+      -ms-transform: translate(0, -80%);
+      transform: translate(0, -80%); }
+    .contentview.login .form .inputfield input {
+      font-size: 1rem;
+      line-height: 45px;
+      width: calc(100% - 25px);
+      height: 45px;
+      margin-left: 0;
+      color: #fff;
+      border: 0;
+      background: transparent;
+      z-index: 5; }
+      .contentview.login .form .inputfield input:focus {
+        outline: 0; }
+      .contentview.login .form .inputfield input::-webkit-caps-lock-indicator {
+        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"><path fill="white" fill-opacity="0.6" d="M12.5 0.5A 4 4 0 0 1 16.5 4.5L 16.5 12.5A 4 4 0 0 1 12.5 16.5L 4.5 16.5A 4 4 0 0 1 0.5 12.5L 0.5 4.5A 4 4 0 0 1 4.5 0.5L 12.5 0.5M 8.5 2L 4 7L 6.25 7L 6.25 10.25L 10.75 10.25L 10.75 7L 13 7L 8.5 2M 10.75 12L 6.25 12L 6.25 14.25L 10.75 14.25L 10.75 12"/></svg>'); }
+      .contentview.login .form .inputfield input::-webkit-credentials-auto-fill-button {
+        background-color: rgba(255, 255, 255, 0.6); }
+      .contentview.login .form .inputfield input:-webkit-autofill, .contentview.login .form .inputfield input:-webkit-autofill:hover, .contentview.login .form .inputfield input:-webkit-autofill:focus {
+        -webkit-transition: 'color 99999s ease-out, background-color 99999s ease-out';
+        transition: 'color 99999s ease-out, background-color 99999s ease-out';
+        -webkit-transition-delay: 99999s;
+        transition-delay: 99999s;
+        -webkit-box-shadow: 0 0 0 1000px #28b094 inset;
+        box-shadow: 0 0 0 1000px #28b094 inset;
+        -webkit-text-fill-color: #fff !important; }
+    .contentview.login .form .inputfield.inputfield input[type='password'] {
+      width: calc(100% - 25px);
+      color: #fff; }
+    .contentview.login .form .inputfield .inputfield input:not([value]) + label,
+    .contentview.login .form .inputfield .inputfield input:not([value='']) + label {
+      font-size: 1.125rem !important;
+      top: 0 !important;
+      left: 0 !important;
+      -webkit-transform: translate(0, -80%);
+      -moz-transform: translate(0, -80%);
+      -ms-transform: translate(0, -80%);
+      transform: translate(0, -80%); }
+    .contentview.login .form .inputfield::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      content: '';
+      background: #fff; }
+    .contentview.login .form .inputfield.focused::before {
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 5px);
+      content: '';
+      background: rgba(0, 0, 0, 0.05);
+      z-index: 0;
+      pointer-events: none; }

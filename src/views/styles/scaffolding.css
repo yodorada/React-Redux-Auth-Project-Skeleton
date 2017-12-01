@@ -1,0 +1,110 @@
+html,
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #fff;
+  font-family: 'Helvetica','Arial', sans-serif;
+  color: #99428e; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+#root {
+  position: relative;
+  z-index: 5; }
+
+#initloader {
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  margin: 30px auto;
+  color: #99428e; }
+
+#scaffolding {
+  margin: 0px auto;
+  padding: 0;
+  z-index: 5;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  opacity: 0; }
+  #scaffolding.ready {
+    opacity: 1; }
+  #scaffolding #routes {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  #scaffolding.change #routes {
+    -webkit-transform: translate(0, 20px);
+    -moz-transform: translate(0, 20px);
+    -ms-transform: translate(0, 20px);
+    transform: translate(0, 20px);
+    opacity: 0; }
+  #scaffolding #wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    margin-top: 60px;
+    width: 100%;
+    position: relative; }
+    #scaffolding #wrapper #inner {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      min-height: 560px; }
+      #scaffolding #wrapper #inner #logo {
+        margin: auto;
+        width: 40px;
+        height: 40px;
+        z-index: 10; }
+        #scaffolding #wrapper #inner #logo img {
+          width: inherit;
+          height: auto; }
+
+.mnml-spinner {
+  display: inline-block;
+  border-radius: 100%;
+  border-style: solid;
+  animation: mnmlSpinner .6s infinite linear; }
+
+@keyframes mnmlSpinner {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(359.9deg); } }
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .scaffolding #wrapper #inner {
+    padding: 0 20px; } }
+
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1220px) {
+  .scaffolding #wrapper #inner {
+    padding: 0; } }
